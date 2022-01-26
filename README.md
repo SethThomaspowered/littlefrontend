@@ -31,3 +31,8 @@ A library steward should be available to:
 ERD
 
 | Books |
+|:-----:|
+| id    |
+| bookTitle |
+
+
