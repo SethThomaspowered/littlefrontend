@@ -28,11 +28,31 @@ A library steward should be available to:
  - Access API for local current events and weather
 
 
-ERD
+## ERD
 
-| Books |
-|:-----:|
-| id    |
-| bookTitle |
+| Books | datatype |
+|:-----:|:-----:|
+| id    | Long PK |
+| bookTitle | string |
+| authorName | string |
+| Date Added | number |
+| IsAvailable | boolean |
+| GoogleBooksID | string FK |
+
+| Users | datatype |
+|:-----:|:------:|
+| id | Long PK |
+| username | string |
+| email | string |
+| password | string |
+
+| Recommendations | datatype |
+|:------:|:-----:|
+| id | Long PK|
+| title | string |
+| post | string |
+| date | number |
+| userId | Long FK |
+| bookId | Long FK |
 
 
