@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BackendService } from '../backend.service';
 import { BOOKS } from './books';
 
 @Component({
@@ -8,10 +9,17 @@ import { BOOKS } from './books';
 })
 export class LibraryComponent implements OnInit {
 
+  bookBacks: any;
   books= BOOKS;
-  constructor() { }
+  constructor(private backend: BackendService) { }
 
+  findBooks(){
+    this.backend.getBooks().subscribe(response => {
+      console.log(response);
+      return this.bookBacks = response});
+  }
   ngOnInit(): void {
+   this.findBooks();
   }
 
 }
