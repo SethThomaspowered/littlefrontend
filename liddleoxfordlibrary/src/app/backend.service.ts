@@ -16,4 +16,13 @@ export class BackendService {
   getBook(id: string) {
     return this.http.get(`${this.urb}/api/books/${id}`);
   }
+  addBook(bookTitle: string, authorName: string){
+    const book ={
+      "bookTitle": bookTitle,
+      "authorName": authorName
+      
+    };
+    console.log(book);
+    this.http.post(`${this.urb}/api/books`, book).subscribe(response=> console.log(response));
+  }
 }

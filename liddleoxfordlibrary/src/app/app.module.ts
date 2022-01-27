@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BackendService } from './backend.service';
+import { NewBookComponent } from './new-book/new-book.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { BackendService } from './backend.service';
     FooterComponent,
     SidebarComponent,
     LibraryComponent,
-    HomeComponent
+    HomeComponent,
+    NewBookComponent
   ],
   imports: [
     BrowserModule,
