@@ -1,0 +1,16 @@
+h1 {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: lightgray;
+}
+ul {
+    list-style: none;
+    text-align: center;
+}
+li{
+    display: inline;
+    color: lightgray;
+    text-decoration: none;
+    padding-right: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
