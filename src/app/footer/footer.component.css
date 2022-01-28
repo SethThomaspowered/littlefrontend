@@ -1,0 +1,9 @@
+footer{
+    background-color: darkgray;
+    display: flex;
+    justify-content: space-between;
+}
+p{
+    display: inline;
+    text-align: center;
+}

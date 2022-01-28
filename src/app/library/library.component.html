@@ -1,0 +1,8 @@
+<div *ngIf="bookBacks">
+    <ul >
+        <li *ngFor="let book of bookBacks"><a routerLink="/library/1/books/{{book.id}}">{{book.bookTitle}}</a> By: {{book.authorName}}</li>
+    </ul>
+</div>
+
+<!-- <input type="button" (click)="findBooks()" value="Find Books"> -->
+<app-new-book></app-new-book>
