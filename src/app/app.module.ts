@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BackendService } from './backend.service';
 import { NewBookComponent } from './new-book/new-book.component';
+import { SearchGBComponent } from './search-gb/search-gb.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { NewBookComponent } from './new-book/new-book.component';
     SidebarComponent,
     LibraryComponent,
     HomeComponent,
-    NewBookComponent
+    NewBookComponent,
+    SearchGBComponent
   ],
   imports: [
     BrowserModule,
