@@ -19,10 +19,21 @@ export class BackendService {
   addBook(bookTitle: string, authorName: string){
     const book ={
       "bookTitle": bookTitle,
-      "authorName": authorName
-      
+      "authorName": authorName,
+      "isAvailable": true    
     };
     console.log(book);
     this.http.post(`${this.urb}/api/books`, book).subscribe(response=> console.log(response));
+  }
+  addGBBook(title: string, description: string, image: string, googleId: string, author: string){
+    const gBBook ={
+      "title": title,
+      "description": description,
+      "image": image,
+      "googleId": googleId,
+      "author": author
+    };
+    console.log(gBBook);
+    this.http.post(`${this.urb}/api/gbbooks`, gBBook).subscribe(response=>console.log(response));
   }
 }
