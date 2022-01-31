@@ -3,10 +3,12 @@
     Search String: {{ book }}
     <input [(ngModel)]="book" type= "text" placeholder="Book Title">
     <input (click)="findBook(book)" type="submit" value="Search">
+    <input (click)="addGBBook(title, description, image, googleId, author)" type="submit" value="add">
 </section>
 <section *ngIf="info">
-    <p>{{googleId}}</p>
-    <h3>Here is the first result from your search: {{title}}</h3>
+     <img src="{{image}}">
+     <p>{{googleId}}</p>
+    <h3>Here is the first result from your search: {{title}} By {{author}}</h3>
     <p>{{description}}</p>
-    <img src="{{image}}">
+   
 </section>

@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BackendService {
 
-  urb = 'http://localhost:9092';
+ urb = 'https://littlebackend.herokuapp.com/';
+  // urb = 'http://localhost:9092'
 
   constructor( private http: HttpClient) { }
 
@@ -19,10 +20,24 @@ export class BackendService {
   addBook(bookTitle: string, authorName: string){
     const book ={
       "bookTitle": bookTitle,
-      "authorName": authorName
-      
+      "authorName": authorName,
+      "isAvailable": true    
     };
     console.log(book);
     this.http.post(`${this.urb}/api/books`, book).subscribe(response=> console.log(response));
+  }
+  addGBBook(title: string, description: string, image: string, googleId: string, author: string){
+    const gBBook ={
+      "title": title,
+      "description": description,
+      "image": image,
+      "googleId": googleId,
+      "author": author
+    };
+    console.log(gBBook);
+    this.http.post(`${this.urb}/api/gbbooks`, gBBook).subscribe(response=>console.log(response));
+  }
+  getGBBooks(){
+    return this.http.get(`${this.urb}/api/gbbooks`);
   }
 }
