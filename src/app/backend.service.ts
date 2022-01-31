@@ -6,8 +6,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class BackendService {
 
-//  urb = 'https://littlebackend.herokuapp.com/';
-  urb = 'http://localhost:9092'
+ urb = 'https://littlebackend.herokuapp.com/';
+  // urb = 'http://localhost:9092'
 
   constructor( private http: HttpClient) { }
 
