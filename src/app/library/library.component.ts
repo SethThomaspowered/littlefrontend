@@ -8,7 +8,7 @@ import { BOOKS } from './books';
   styleUrls: ['./library.component.css']
 })
 export class LibraryComponent implements OnInit {
-
+  gBBookBacks: any;
   bookBacks: any;
   books= BOOKS;
   constructor(private backend: BackendService) { }
@@ -18,8 +18,14 @@ export class LibraryComponent implements OnInit {
       console.log(response);
       return this.bookBacks = response});
   }
+  findGBBooks(){
+    this.backend.getGBBooks().subscribe(response => {
+      console.log(response);
+      return this.gBBookBacks= response});
+  }
   ngOnInit(): void {
-   this.findBooks();
+  //  this.findBooks();
+  this.findGBBooks();
   }
 
 }

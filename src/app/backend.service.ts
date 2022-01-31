@@ -6,7 +6,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class BackendService {
 
-  urb = 'http://localhost:9092';
+//  urb = 'https://littlebackend.herokuapp.com/';
+  urb = 'http://localhost:9092'
 
   constructor( private http: HttpClient) { }
 
@@ -35,5 +36,8 @@ export class BackendService {
     };
     console.log(gBBook);
     this.http.post(`${this.urb}/api/gbbooks`, gBBook).subscribe(response=>console.log(response));
+  }
+  getGBBooks(){
+    return this.http.get(`${this.urb}/api/gbbooks`);
   }
 }
