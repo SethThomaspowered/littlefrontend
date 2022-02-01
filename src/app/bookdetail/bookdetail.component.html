@@ -1,4 +1,6 @@
-<section *ngIf="gBBook.id">
+
+<div *ngFor="let gBBook of gBBookBacks">
+<section *ngIf="gBBook.id===book.id">
     <img src="{{gBBook.image}}">
        <h3>{{gBBook.title}} By {{gBBook.author}}</h3>
    <p>Description from  Google Reads: <br>
@@ -12,5 +14,5 @@
     {{gBBook.description}}</p>
   
 </section>
-
+</div>
 
