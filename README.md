@@ -55,6 +55,31 @@ A library steward should be available to:
 | userId | Long FK |
 | bookId | Long FK |
 
+## Updated ERD
+<img width="412" alt="image" src="https://user-images.githubusercontent.com/83875269/152061136-33ec5487-0153-4ab6-93ca-13e466c12a85.png">
+
+## Project Timeline
+  This project was completed over the course of one week.
+  
+### Day 1
+- Focused on backend program using SpringBoot.
+- Created new Angular program.
+- Added a splash page.
+- Attempted to deploy to Heroku.
+
+### Day 2
+- Routed from splashpage to library
+- Created Book Class to test functionality on Library page.
+- Connected Angular program to SpringBoot program on the localhost.
+- Still unsuccessful deploying to Heroku.
+
+### Day 3
+- Incorporated GoogleBooks API to get images of books and additional details.
+
+### Day 4
+
+### Day 5
+
 ## Resources
 - Dealing with env files. (ITsolutionstuff)[https://www.itsolutionstuff.com/post/how-to-use-environment-variable-in-angularexample.html]
 - Setting up a 404 page (GeeksforGeeeks)[https://www.geeksforgeeks.org/how-to-setup-404-page-in-angular-routing/]
