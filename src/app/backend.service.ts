@@ -1,21 +1,22 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BackendService {
 
- urb = 'https://littlebackend.herokuapp.com/';
-  // urb = 'http://localhost:9092'
+
+  uri = environment.uri;
 
   constructor( private http: HttpClient) { }
 
   getBooks() {
-    return this.http.get(`${this.urb}/api/books`)
+    return this.http.get(`${this.uri}/api/books`)
   }
   getBook(id: string) {
-    return this.http.get(`${this.urb}/api/books/${id}`);
+    return this.http.get(`${this.uri}/api/books/${id}`);
   }
   addBook(bookTitle: string, authorName: string){
     const book ={
@@ -24,7 +25,7 @@ export class BackendService {
       "isAvailable": true    
     };
     console.log(book);
-    this.http.post(`${this.urb}/api/books`, book).subscribe(response=> console.log(response));
+    this.http.post(`${this.uri}/api/books`, book).subscribe(response=> console.log(response));
   }
   addGBBook(title: string, description: string, image: string, googleId: string, author: string){
     const gBBook ={
@@ -35,9 +36,9 @@ export class BackendService {
       "author": author
     };
     console.log(gBBook);
-    this.http.post(`${this.urb}/api/gbbooks`, gBBook).subscribe(response=>console.log(response));
+    this.http.post(`${this.uri}/api/gbbooks`, gBBook).subscribe(response=>console.log(response));
   }
   getGBBooks(){
-    return this.http.get(`${this.urb}/api/gbbooks`);
+    return this.http.get(`${this.uri}/api/gbbooks`);
   }
 }

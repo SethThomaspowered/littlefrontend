@@ -3,6 +3,10 @@
         <li *ngFor="let book of gBBookBacks"><img src="{{book.image}}" alt="{{book.title}}"><a routerLink="/library/1/books/{{book.id}}">{{book.title}}</a> By: {{book.author}}</li>
     </ul>
 </div>
-
+<div *ngIf="!gBBookBacks">
+    <ul >
+        <li *ngFor="let book of books"><a routerLink="/library/1/books/{{book.id}}">{{book.bookTitle}}</a> By: {{book.authorName}}</li>
+    </ul>
+</div>
 <!-- <input type="button" (click)="findBooks()" value="Find Books"> -->
 <app-new-book></app-new-book>
