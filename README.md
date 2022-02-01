@@ -55,4 +55,10 @@ A library steward should be available to:
 | userId | Long FK |
 | bookId | Long FK |
 
-
+## Resources
+- Dealing with env files. (ITsolutionstuff)[https://www.itsolutionstuff.com/post/how-to-use-environment-variable-in-angularexample.html]
+- Setting up a 404 page (GeeksforGeeeks)[https://www.geeksforgeeks.org/how-to-setup-404-page-in-angular-routing/]
+- Connecting SpringBoot to Angular (Baeldung)[https://www.baeldung.com/spring-boot-angular-web]
+- Handling No-Access-Control-Allow issue (StackOverflow)[https://stackoverflow.com/questions/20035101/why-does-my-javascript-code-receive-a-no-access-control-allow-origin-header-i]
+- Angular documentation (Angular.io)[https://angular.io/api/common/http/HttpHeaders]
+- Heroku issues (Heroku)[https://devcenter.heroku.com/]
