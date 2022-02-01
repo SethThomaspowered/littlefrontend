@@ -12,12 +12,12 @@ Build a website for the books that I have in my little library. People should be
 A visitor to the website:
   - See the most recent additions to library.
   - Click on books to get more details.
-  - Leave a comment 
+  - Leave a comment (added feature)
 
 A library steward should be available to: 
   - Add books to a database
   - Update status of book availability 
-  - Add book recommendations
+  - Add book recommendations(added feature)
  
  ### Bonus
  - Add log in functionality
