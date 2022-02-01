@@ -5,4 +5,12 @@
     {{gBBook.description}}</p>
   
 </section>
+<section *ngIf="!gBBookBacks">
+    
+       <h3>{{gBBook.bookTitle}} By {{gBBook.authorName}}</h3>
+   <p>Description from  Google Reads: <br>
+    {{gBBook.description}}</p>
+  
+</section>
+
 
