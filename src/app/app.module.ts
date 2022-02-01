@@ -13,6 +13,8 @@ import { FormsModule } from '@angular/forms';
 import { BackendService } from './backend.service';
 import { NewBookComponent } from './new-book/new-book.component';
 import { SearchGBComponent } from './search-gb/search-gb.component';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { BookdetailComponent } from './bookdetail/bookdetail.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { SearchGBComponent } from './search-gb/search-gb.component';
     LibraryComponent,
     HomeComponent,
     NewBookComponent,
-    SearchGBComponent
+    SearchGBComponent,
+    NotfoundComponent,
+    BookdetailComponent
   ],
   imports: [
     BrowserModule,
