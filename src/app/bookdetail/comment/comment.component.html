@@ -1,0 +1,9 @@
+<p>What are people saying about this book?</p>
+<ul *ngIf="comments">
+    <li *ngFor="let comment of comments">{{comment.name}}<br>
+    {{comment.comment}}</li> 
+</ul>
+<p>Leave a comment:</p>
+<label name="newName">Name:<input type="text" [(ngModel)]="newName" placeholder="Add Your Name"></label>
+<label name="newComment">Comment:<textarea [(ngModel)]="newComment"></textarea></label>
+<input type="submit" (click)="postComments(1, newName, newComment)" value="Add Comment">

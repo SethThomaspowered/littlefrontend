@@ -15,6 +15,7 @@ import { NewBookComponent } from './new-book/new-book.component';
 import { SearchGBComponent } from './search-gb/search-gb.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { BookdetailComponent } from './bookdetail/bookdetail.component';
+import { CommentComponent } from './bookdetail/comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { BookdetailComponent } from './bookdetail/bookdetail.component';
     NewBookComponent,
     SearchGBComponent,
     NotfoundComponent,
-    BookdetailComponent
+    BookdetailComponent,
+    CommentComponent
   ],
   imports: [
     BrowserModule,
