@@ -1,17 +1,19 @@
 <p>What are people saying about this book?</p>
-<table *ngIf="comments">
-    <thead><td>User Name</td><td>Comment</td></thead>
 
-    <tr *ngFor="let comment of comments">
-        <td>
-            {{comment.name}}
-        </td>
-        <td>
-            {{comment.comment}}
-        </td>
-    </tr> 
+<table>
+    <thead><td>Book Id</td><td>User Name</td><td>Comment</td></thead>
+        <tr  *ngFor="let comment of comments">
+            <td *ngIf="comment.gbBook.id === book.id">{{comment.gbBook.id}}</td>
+            <td *ngIf="comment.gbBook.id === book.id">
+                {{comment.name}}
+            </td>
+            <td *ngIf="comment.gbBook.id === book.id">
+                {{comment.comment}}
+            </td>
+           
+        </tr> 
 </table>
 <p>Leave a comment:</p>
 <label name="newName">Name:<input type="text" [(ngModel)]="newName" placeholder="Add Your Name"></label><br>
 <label name="newComment">Comment:<textarea [(ngModel)]="newComment"></textarea></label>
-<input type="submit" (click)="postComments(2, newName, newComment)" value="Add Comment">
+<input type="submit" (click)="postComments(book.id, newName, newComment)" value="Add Comment">

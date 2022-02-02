@@ -15,7 +15,12 @@ export class NewBookComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  /* Adds a book for admin to review and add if in library
+   * Resets newBookTitle and newAuthorName after submission
+   */
   addBook(booktitle: string, author: string){
     this.backend.addBook(booktitle, author)
+    this.newBookTitle="";
+    this.newAuthorName="";
   }
 }

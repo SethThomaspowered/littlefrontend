@@ -3,9 +3,11 @@ td {
     display:flexbox;
     width: 20%;
     text-align: center;
-    text-transform: capitalize;
     margin-right: 0px;
-    font-size: x-small;
+    font-size: large;
+}
+thead {
+    background-color: burlywood;
 }
 tr:nth-child(even) {
     background-color: cornsilk;

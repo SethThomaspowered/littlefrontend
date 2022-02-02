@@ -34,6 +34,7 @@ export class SearchGBComponent implements OnInit {
   }
   addGBBook(title: string, description: string, image: string, googleId: string, author: string){
     this.backend.addGBBook(title, description, image, googleId, author);
+    this.book="";
   }
   getBooks(){
     this.backend.getBooks().subscribe(response=>{

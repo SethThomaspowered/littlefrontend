@@ -7,6 +7,9 @@ td {
     margin-right: 0px;
     font-size: large;
 }
+thead {
+    background-color: burlywood;
+}
 tr:nth-child(even) {
     background-color: cornsilk;
 }
