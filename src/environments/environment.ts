@@ -2,6 +2,10 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+/* First time using environment files checked several resources but the one that made it click
+ * was https://www.itsolutionstuff.com/post/how-to-use-environment-variable-in-angularexample.html
+ * The url for the Rest API created changes from the dev environment to the production environment
+ */
 export const environment = {
   production: false,
   uri: "http://localhost:9092"

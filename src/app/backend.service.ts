@@ -41,4 +41,16 @@ export class BackendService {
   getGBBooks(){
     return this.http.get(`${this.uri}/api/gbbooks`);
   }
+  getComments(){
+    return this.http.get(`${this.uri}/api/gbbooks/1/comments`);
+  }
+  postComments(bookId: number, name: string, comment: string){
+    const comments={
+      
+      "name": name,
+      "comment": comment,
+    };
+    console.log(comments);
+    this.http.post(`${this.uri}/api/gbbooks/${bookId}/comments`, comments).subscribe(response=>console.log(response));
+  }
 }

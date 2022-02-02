@@ -5,7 +5,7 @@ td {
     text-align: center;
     text-transform: capitalize;
     margin-right: 0px;
-    font-size: large;
+    font-size: x-small;
 }
 tr:nth-child(even) {
     background-color: cornsilk;
