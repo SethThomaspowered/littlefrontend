@@ -1,4 +1,5 @@
 <div *ngIf="editions">
+   <!-- This is a table where admin can see books that visitors add-->
     <table>
         <thead><td>Title</td><td>Author</td><td>Checked Out</td></thead>
         <tr *ngFor="let edition of editions">
@@ -9,7 +10,8 @@
     </table>
 </div>
     <section>
-    <h2>Looking for a Book!</h2>
+    <!--If book is in library admin can find book on GoogleBooks and add to library list-->
+        <h2>Looking for a Book!</h2>
     Search String: {{ book }}
     <input [(ngModel)]="book" type= "text" placeholder="Book Title">
     <input (click)="findBook(book)" type="submit" value="Search">
