@@ -11,6 +11,7 @@ export class CommentComponent implements OnInit {
   newName: string="";
   newComment: string="";
   constructor(private backend: BackendService) { }
+  //This retrieves all comments from database. In the future, comments will be filtered by book. 
   getComments(){
     this.backend.getComments().subscribe(response =>{
       console.log(response);

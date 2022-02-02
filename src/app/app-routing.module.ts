@@ -9,8 +9,11 @@ import { SearchGBComponent } from './search-gb/search-gb.component';
 const routes: Routes = [
   { path: '', component: HomeComponent},
   { path: "library", component: LibraryComponent},
+  //Path to description and comments for a particular book. In the future I would like to add multiple libraries.
   { path: "library/1/books/:id", component: BookdetailComponent},
+  //Path for adminstrative tasks like adding books to library.
   { path: "hippo", component: SearchGBComponent},
+  // This is a catch all path that leads to 404 page, if a page can not be found.
   { path: "**", pathMatch: 'full', component: NotfoundComponent}
 ];
 
