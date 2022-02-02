@@ -15,6 +15,7 @@ export class SearchGBComponent implements OnInit {
   googleId: string= "";
   isbn: string="";
   author: string="";
+  editions: any;
   constructor(private http: HttpClient, private backend: BackendService) { }
   findBook(book: string){
     this.http
@@ -34,7 +35,14 @@ export class SearchGBComponent implements OnInit {
   addGBBook(title: string, description: string, image: string, googleId: string, author: string){
     this.backend.addGBBook(title, description, image, googleId, author);
   }
+  getBooks(){
+    this.backend.getBooks().subscribe(response=>{
+      console.log(response);
+      return this.editions=response;
+    })
+  }
   ngOnInit(): void {
+    this.getBooks();
   }
 
 }

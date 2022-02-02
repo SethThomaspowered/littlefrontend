@@ -1,4 +1,14 @@
-<<section>
+<div *ngIf="editions">
+    <table>
+        <thead><td>Title</td><td>Author</td><td>Checked Out</td></thead>
+        <tr *ngFor="let edition of editions">
+            <td>{{edition.bookTitle}}</td>
+            <td> By: {{edition.authorName}}</td>
+            <td><input type="checkbox" [(ngModel)]="edition.available"></td>
+        </tr>
+    </table>
+</div>
+    <section>
     <h2>Looking for a Book!</h2>
     Search String: {{ book }}
     <input [(ngModel)]="book" type= "text" placeholder="Book Title">
