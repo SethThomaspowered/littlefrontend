@@ -1,0 +1,15 @@
+td {
+	border: 1px solid black;
+    display:flexbox;
+    width: 20%;
+    text-align: center;
+    text-transform: capitalize;
+    margin-right: 0px;
+    font-size: large;
+}
+tr:nth-child(even) {
+    background-color: cornsilk;
+}
+tr:nth-child(odd) {
+    background-color: bisque;
+}

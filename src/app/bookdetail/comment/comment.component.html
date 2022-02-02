@@ -1,9 +1,17 @@
 <p>What are people saying about this book?</p>
-<ul *ngIf="comments">
-    <li *ngFor="let comment of comments">{{comment.name}}<br>
-    {{comment.comment}}</li> 
-</ul>
+<table *ngIf="comments">
+    <thead><td>User Name</td><td>Comment</td></thead>
+
+    <tr *ngFor="let comment of comments">
+        <td>
+            {{comment.name}}
+        </td>
+        <td>
+            {{comment.comment}}
+        </td>
+    </tr> 
+</table>
 <p>Leave a comment:</p>
-<label name="newName">Name:<input type="text" [(ngModel)]="newName" placeholder="Add Your Name"></label>
+<label name="newName">Name:<input type="text" [(ngModel)]="newName" placeholder="Add Your Name"></label><br>
 <label name="newComment">Comment:<textarea [(ngModel)]="newComment"></textarea></label>
-<input type="submit" (click)="postComments(1, newName, newComment)" value="Add Comment">
+<input type="submit" (click)="postComments(2, newName, newComment)" value="Add Comment">

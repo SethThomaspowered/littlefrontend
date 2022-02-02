@@ -1,12 +1,18 @@
 <div *ngIf="gBBookBacks">
-    <ul >
-        <li *ngFor="let book of gBBookBacks"><img src="{{book.image}}" alt="{{book.title}}"><a routerLink="/library/1/books/{{book.id}}">{{book.title}}</a> By: {{book.author}}</li>
-    </ul>
+    <table>
+        <thead><td>Cover Image</td><td>Title</td><td>Author</td><td>Checked Out</td></thead>
+        <tr *ngFor="let book of gBBookBacks">
+            <td><img src="{{book.image}}" alt="{{book.title}}"></td>
+            <td><a routerLink="/library/1/books/{{book.id}}">{{book.title}}</a></td>
+            <td> By: {{book.author}}</td>
+            <td><input type="checkbox"></td>
+        </tr>
+    </table>
 </div>
 <div *ngIf="!gBBookBacks">
-    <ul >
+    <table>
         <li *ngFor="let book of books"><a routerLink="/library/1/books/{{book.id}}">{{book.bookTitle}}</a> By: {{book.authorName}}</li>
-    </ul>
+    </table>
 </div>
 <!-- <input type="button" (click)="findBooks()" value="Find Books"> -->
 <app-new-book></app-new-book>
