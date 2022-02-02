@@ -6,6 +6,9 @@ import { BackendService } from 'src/app/backend.service';
   templateUrl: './comment.component.html',
   styleUrls: ['./comment.component.css']
 })
+/* This section accesses the comments table on the backend. It allows visitors to post comments about a particular book.
+ * As well as see comments left by other visitors.
+ */
 export class CommentComponent implements OnInit {
   comments: any;
   newName: string="";
