@@ -98,6 +98,8 @@ A library steward should be available to:
   ```
   @Input() variable;
   
+  ```
+- Learning about server.js   
 ## Resources
 - Dealing with env files. (ITsolutionstuff)[https://www.itsolutionstuff.com/post/how-to-use-environment-variable-in-angularexample.html]
 - Setting up a 404 page (GeeksforGeeeks)[https://www.geeksforgeeks.org/how-to-setup-404-page-in-angular-routing/]
