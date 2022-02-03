@@ -29,6 +29,9 @@ A library steward should be available to:
  - Leave a comment (added feature)
  - Add book recommendations(added feature)
 
+##
+![Little Library Wireframe](https://user-images.githubusercontent.com/83875269/152417256-5de2b5fe-5064-483d-9229-43b4d26e82c6.png)
+
 ## ERD
 
 | Books | datatype |
@@ -83,6 +86,18 @@ A library steward should be available to:
 ### Day 5
 - Added Comments feature.
 - Added Checkout feature.
+
+## Hurdles
+- Figuring out how to share variables from parent to child component
+  In the parent html add the following code.
+  ```
+  <app-child [variable]=variable></app-child>
+  
+  ```
+  In the child component at the following code inside the class
+  ```
+  @Input() variable;
+  
 ## Resources
 - Dealing with env files. (ITsolutionstuff)[https://www.itsolutionstuff.com/post/how-to-use-environment-variable-in-angularexample.html]
 - Setting up a 404 page (GeeksforGeeeks)[https://www.geeksforgeeks.org/how-to-setup-404-page-in-angular-routing/]
