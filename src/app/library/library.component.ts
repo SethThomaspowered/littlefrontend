@@ -23,6 +23,11 @@ export class LibraryComponent implements OnInit {
       console.log(response);
       return this.gBBookBacks= response});
   }
+  checkoutGBBook(id: number, checkout: boolean){
+    this.backend.checkoutGBBook(id, checkout).subscribe(response=>{
+      console.log(response);
+    });
+  }
   ngOnInit(): void {
   //  this.findBooks();
   this.findGBBooks();

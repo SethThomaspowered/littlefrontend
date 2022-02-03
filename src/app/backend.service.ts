@@ -41,6 +41,10 @@ export class BackendService {
   getGBBooks(){
     return this.http.get(`${this.uri}/api/gbbooks`);
   }
+  checkoutGBBook(id: number, checkout: boolean){
+      const checkedOut={"checkedOut": checkout}
+    return this.http.put(`${this.uri}/api/gbbooks/${id}`, checkedOut);
+  }
   getComments(){
     return this.http.get(`${this.uri}/api/gbbooks/1/comments`);
   }
