@@ -2,3 +2,8 @@
     display: flex;
     justify-content: center;
 }
+#tagline {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: hsl(0, 0%, 83%);
+}

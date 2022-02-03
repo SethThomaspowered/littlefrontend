@@ -5,13 +5,17 @@ td {
     text-align: center;
     margin-right: 0px;
     font-size: large;
+    color: hsl(0, 0, 83%);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-thead{
-    background-color: burlywood;
+thead {
+    background-color: hsl(34, 57%, 30%);
+    color: hsl(0, 0, 83%);
 }
+
 tr:nth-child(even) {
-    background-color: cornsilk;
+    background-color: hsl(34, 57%, 60%);
 }
 tr:nth-child(odd) {
-    background-color: bisque;
+    background-color: hsl(34, 57%, 50%);
 }

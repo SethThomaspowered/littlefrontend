@@ -1,5 +1,5 @@
 footer{
-    background-color: darkgray;
+    background-color: hsl(17, 20%, 30%);
     display: flex;
     justify-content: space-between;
     
@@ -7,4 +7,6 @@ footer{
 p{
     display: inline;
     text-align: center;
+    color: hsl(0, 0%, 83%);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
