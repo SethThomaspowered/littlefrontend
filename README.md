@@ -12,12 +12,12 @@ Build a website for the books that I have in my little library. People should be
 A visitor to the website:
   - See the most recent additions to library.
   - Click on books to get more details.
-  - Leave a comment (added feature)
+ 
 
 A library steward should be available to: 
   - Add books to a database
   - Update status of book availability 
-  - Add book recommendations(added feature)
+  
  
  ### Bonus
  - Add log in functionality
@@ -26,7 +26,8 @@ A library steward should be available to:
  - Add additional libraries
  - Access API for additional book details
  - Access API for local current events and weather
-
+ - Leave a comment (added feature)
+ - Add book recommendations(added feature)
 
 ## ERD
 
@@ -77,9 +78,11 @@ A library steward should be available to:
 - Incorporated GoogleBooks API to get images of books and additional details.
 
 ### Day 4
-
+- Successfully deployed to Heroku
+- Connected frontend to backend from deployed websites.
 ### Day 5
-
+- Added Comments feature.
+- Added Checkout feature.
 ## Resources
 - Dealing with env files. (ITsolutionstuff)[https://www.itsolutionstuff.com/post/how-to-use-environment-variable-in-angularexample.html]
 - Setting up a 404 page (GeeksforGeeeks)[https://www.geeksforgeeks.org/how-to-setup-404-page-in-angular-routing/]
