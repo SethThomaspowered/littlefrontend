@@ -1,6 +1,7 @@
 # Little Library Front End Development
 
 This will be my main repo for my capstone project for the General Assembly Software Engineering Immersive using Angular Framework for the front end. For a look at my SpringBoot application go to [LittleBackEnd](https://github.com/SethThomaspowered/littlebackend). 
+Here is a link to the live project. [LiddleOxfordLibrary](https://liddleoxfordlibrary.herokuapp.com)
 
 ## Project Proposal
 
