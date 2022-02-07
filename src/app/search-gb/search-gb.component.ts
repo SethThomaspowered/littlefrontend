@@ -15,6 +15,7 @@ export class SearchGBComponent implements OnInit {
   googleId: string= "";
   isbn: string="";
   author: string="";
+  libraryId: number=1;
   editions: any;
   constructor(private http: HttpClient, private backend: BackendService) { }
   findBook(book: string){
@@ -32,8 +33,11 @@ export class SearchGBComponent implements OnInit {
     });
     
   }
-  addGBBook(title: string, description: string, image: string, googleId: string, author: string){
-    this.backend.addGBBook(title, description, image, googleId, author);
+  addGBBook(title: string, description: string, image: string, googleId: string, author: string, libraryId: number){
+    if(description.length >= 2000){
+      description = description.substring(0,1999);
+    }
+    this.backend.addGBBook(title, description, image, googleId, author, libraryId);
     this.book="";
   }
   getBooks(){

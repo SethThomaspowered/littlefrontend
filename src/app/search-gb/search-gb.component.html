@@ -13,9 +13,10 @@
     <!--If book is in library admin can find book on GoogleBooks and add to library list-->
         <h2>Looking for a Book!</h2>
     Search String: {{ book }}
+    <input [(ngModel)]="libraryId" text="text" placeholder="Library Id">
     <input [(ngModel)]="book" type= "text" placeholder="Book Title">
     <input (click)="findBook(book)" type="submit" value="Search">
-    <input (click)="addGBBook(title, description, image, googleId, author)" type="submit" value="add">
+    <input (click)="addGBBook(title, description, image, googleId, author, libraryId)" type="submit" value="add">
 </section>
 <section *ngIf="info">
      <img src="{{image}}">

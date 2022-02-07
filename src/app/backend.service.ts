@@ -27,13 +27,14 @@ export class BackendService {
     console.log(book);
     this.http.post(`${this.uri}/api/books`, book).subscribe(response=> console.log(response));
   }
-  addGBBook(title: string, description: string, image: string, googleId: string, author: string){
+  addGBBook(title: string, description: string, image: string, googleId: string, author: string, libraryId: number){
     const gBBook ={
       "title": title,
       "description": description,
       "image": image,
       "googleId": googleId,
-      "author": author
+      "author": author,
+      "libraryId": libraryId,
     };
     console.log(gBBook);
     this.http.post(`${this.uri}/api/gbbooks`, gBBook).subscribe(response=>console.log(response));
