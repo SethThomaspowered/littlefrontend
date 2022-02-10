@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { BackendService } from '../backend.service';
+import { ToastService } from '../toast.service';
 @Component({
   selector: 'app-new-book',
   templateUrl: './new-book.component.html',
@@ -9,9 +10,9 @@ import { BackendService } from '../backend.service';
 export class NewBookComponent implements OnInit {
   newBookTitle: string = "";
   newAuthorName: string = "";
-  
 
-  constructor(private backend: BackendService) { }
+
+  constructor(private backend: BackendService, private toast: ToastService) { }
 
   ngOnInit(): void {
   }

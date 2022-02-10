@@ -22,10 +22,11 @@ export class BackendService {
     const book ={
       "bookTitle": bookTitle,
       "authorName": authorName,
-      "isAvailable": true    
+      "isAvailable": true
     };
     console.log(book);
     this.http.post(`${this.uri}/api/books`, book).subscribe(response=> console.log(response));
+    alert("Book has been sent to Library Steward");
   }
   addGBBook(title: string, description: string, image: string, googleId: string, author: string, libraryId: number){
     const gBBook ={
@@ -51,7 +52,7 @@ export class BackendService {
   }
   postComments(bookId: number, name: string, comment: string){
     const comments={
-      
+
       "name": name,
       "comment": comment,
     };
