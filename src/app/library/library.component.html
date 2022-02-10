@@ -2,7 +2,7 @@
     <table>
         <thead><td>Cover Image</td><td>Title</td><td>Author</td><td>Checked Out</td></thead>
         <tr *ngFor="let book of gBBookBacks">
-            <td *ngIf="!book.checkedOut"><img src="{{book.image}}" alt="{{book.title}}"></td>
+            <td *ngIf="!book.checkedOut && book.libraryId===2"><img src="{{book.image}}" alt="{{book.title}}"></td>
             <td *ngIf="!book.checkedOut"><a routerLink="/library/1/books/{{book.id}}">{{book.title}}</a></td>
             <td *ngIf="!book.checkedOut"> By: {{book.author}}</td>
             <td *ngIf="!book.checkedOut"><input type="checkbox" (click)="checkoutGBBook(book.id, true)"></td>
@@ -11,7 +11,7 @@
 </div>
 <div *ngIf="!gBBookBacks">
     <table>
-        <li *ngFor="let book of books"><a routerLink="/library/1/books/{{book.id}}">{{book.bookTitle}}</a> By: {{book.authorName}}</li>
+        <li *ngFor="let book of books"><a routerLink="/library/{{library.id}}/books/{{book.id}}">{{book.bookTitle}}</a> By: {{book.authorName}}</li>
     </table>
 </div>
 <!-- <input type="button" (click)="findBooks()" value="Find Books"> -->

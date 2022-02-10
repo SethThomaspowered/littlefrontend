@@ -11,6 +11,7 @@ export class LibraryComponent implements OnInit {
   gBBookBacks: any;
   bookBacks: any;
   books= BOOKS;
+  library: any;
   constructor(private backend: BackendService) { }
 
   findBooks(){
