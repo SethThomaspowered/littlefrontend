@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { BackendService } from '../backend.service';
 import { BOOKS } from './books';
 
@@ -12,7 +13,9 @@ export class LibraryComponent implements OnInit {
   bookBacks: any;
   books= BOOKS;
   library: any;
-  constructor(private backend: BackendService) { }
+  currentId: any;
+  id: any;
+  constructor(private backend: BackendService, private route: ActivatedRoute) { }
 
   findBooks(){
     this.backend.getBooks().subscribe(response => {
@@ -31,7 +34,10 @@ export class LibraryComponent implements OnInit {
   }
   ngOnInit(): void {
   //  this.findBooks();
+  this.currentId= this.route.snapshot.paramMap.get('id');
+  this.id = parseInt(this.currentId);
   this.findGBBooks();
-  }
+
+}
 
 }
