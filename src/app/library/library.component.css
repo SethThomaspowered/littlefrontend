@@ -19,3 +19,8 @@ tr:nth-child(even) {
 tr:nth-child(odd) {
     background-color: hsl(34, 57%, 50%);
 }
+h2, h5{
+  text-align: center;
+  color:hsl(0, 0, 50%);
+
+ }

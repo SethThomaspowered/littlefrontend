@@ -31,7 +31,7 @@ export class SearchGBComponent implements OnInit {
       this.isbn=this.info.items[0].volumeInfo.industryIdentifiers[1];
       this.author=this.info.items[0].volumeInfo.authors[0];
     });
-    
+
   }
   addGBBook(title: string, description: string, image: string, googleId: string, author: string, libraryId: number){
     if(description.length >= 2000){
@@ -45,6 +45,11 @@ export class SearchGBComponent implements OnInit {
       console.log(response);
       return this.editions=response;
     })
+  }
+  checkoutBook(id: number, checkout: boolean){
+    this.backend.checkoutBook(id, checkout).subscribe(response=>{
+      console.log(response);
+    });
   }
   ngOnInit(): void {
     this.getBooks();

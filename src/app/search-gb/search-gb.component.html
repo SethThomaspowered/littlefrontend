@@ -1,11 +1,13 @@
 <div *ngIf="editions">
    <!-- This is a table where admin can see books that visitors add-->
     <table>
-        <thead><td>Title</td><td>Author</td><td>Checked Out</td></thead>
+        <thead><td>Title</td><td>Author</td><td>Library ID</td><td>Address</td><td>Checked Out</td></thead>
         <tr *ngFor="let edition of editions">
-            <td>{{edition.bookTitle}}</td>
-            <td> By: {{edition.authorName}}</td>
-            <td><input type="checkbox" [(ngModel)]="edition.available"></td>
+            <td *ngIf="!edition.available">{{edition.bookTitle}}</td>
+            <td *ngIf="!edition.available"> By: {{edition.authorName}}</td>
+            <td *ngIf="!edition.available">{{edition.libraryId}}</td>
+            <td *ngIf="!edition.available">{{edition.address}}</td>
+            <td *ngIf="!edition.available"><input type="checkbox" [(ngModel)]="edition.available" (click)="checkoutBook(edition.id, true)"></td>
         </tr>
     </table>
 </div>
@@ -23,5 +25,5 @@
      <p>{{googleId}}</p>
     <h3>Here is the first result from your search: {{title}} By {{author}}</h3>
     <p>{{description}}</p>
-   
+
 </section>

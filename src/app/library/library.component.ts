@@ -27,6 +27,11 @@ export class LibraryComponent implements OnInit {
       console.log(response);
       return this.gBBookBacks= response});
   }
+  getLibrary(id: number){
+    this.backend.getLibrary(id).subscribe(response =>{
+      console.log(response);
+    return this.library=response})
+  }
   checkoutGBBook(id: number, checkout: boolean){
     this.backend.checkoutGBBook(id, checkout).subscribe(response=>{
       console.log(response);
@@ -36,6 +41,7 @@ export class LibraryComponent implements OnInit {
   //  this.findBooks();
   this.currentId= this.route.snapshot.paramMap.get('id');
   this.id = parseInt(this.currentId);
+  this.getLibrary(this.id);
   this.findGBBooks();
 
 }

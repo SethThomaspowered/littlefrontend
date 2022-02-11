@@ -43,10 +43,15 @@ export class BackendService {
   getGBBooks(){
     return this.http.get(`${this.uri}/api/gbbooks`);
   }
+
   checkoutGBBook(id: number, checkout: boolean){
-      const checkedOut={"checkedOut": checkout}
-    return this.http.put(`${this.uri}/api/gbbooks/${id}`, checkedOut);
-  }
+    const checkedOut={"checkedOut": checkout}
+  return this.http.put(`${this.uri}/api/gbbooks/${id}`, checkedOut);
+}
+  checkoutBook(id: number, checkout: boolean){
+  const checkedOut={"available": checkout}
+return this.http.put(`${this.uri}/api/books/${id}`, checkedOut);
+}
   getComments(){
     return this.http.get(`${this.uri}/api/gbbooks/1/comments`);
   }
@@ -59,4 +64,5 @@ export class BackendService {
     console.log(comments);
     this.http.post(`${this.uri}/api/gbbooks/${bookId}/comments`, comments).subscribe(response=>console.log(response));
   }
+  getLibrary(libraryId: number){return this.http.get(`${this.uri}/api/library/${libraryId}`)};
 }
