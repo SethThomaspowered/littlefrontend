@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BackendService } from '../backend.service';
 import { BOOKS } from './books';
@@ -15,7 +15,10 @@ export class LibraryComponent implements OnInit {
   library: any;
   currentId: any;
   id: any;
-  constructor(private backend: BackendService, private route: ActivatedRoute) { }
+  constructor(private backend: BackendService, private route: ActivatedRoute, private ref: ChangeDetectorRef) {
+    setInterval(()=> {
+      this.ref.detectChanges()}, 1000);
+   }
 
   findBooks(){
     this.backend.getBooks().subscribe(response => {

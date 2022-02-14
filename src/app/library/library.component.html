@@ -1,11 +1,13 @@
-<h2>{{library.name}}</h2>
-<h5>Address: {{library.street}} {{library.city}}, {{library.state}} {{library.zipCode}}</h5>
+<div *ngIf="library">
+  <h2>{{library.name}}</h2>
+  <h5>Address: {{library.street}} {{library.city}}, {{library.state}} {{library.zipCode}}</h5>
+</div>
 <div *ngIf="gBBookBacks">
     <table>
         <thead><td>Cover Image</td><td>Title</td><td>Author</td><td>Checked Out</td></thead>
         <tr *ngFor="let book of gBBookBacks">
             <td *ngIf="!book.checkedOut && book.libraryId===id"><img src="{{book.image}}" alt="{{book.title}}"></td>
-            <td *ngIf="!book.checkedOut && book.libraryId===id"><a routerLink="/library/1/books/{{book.id}}">{{book.title}}</a></td>
+            <td *ngIf="!book.checkedOut && book.libraryId===id"><a routerLink="/library/{{library.id}}/books/{{book.id}}">{{book.title}}</a></td>
             <td *ngIf="!book.checkedOut && book.libraryId===id"> By: {{book.author}}</td>
             <td *ngIf="!book.checkedOut && book.libraryId===id"><input type="checkbox" (click)="checkoutGBBook(book.id, true)"></td>
         </tr>

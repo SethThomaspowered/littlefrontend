@@ -65,4 +65,5 @@ return this.http.put(`${this.uri}/api/books/${id}`, checkedOut);
     this.http.post(`${this.uri}/api/gbbooks/${bookId}/comments`, comments).subscribe(response=>console.log(response));
   }
   getLibrary(libraryId: number){return this.http.get(`${this.uri}/api/library/${libraryId}`)};
+  getLibraries(){return this.http.get(`${this.uri}/api/library`)};
 }

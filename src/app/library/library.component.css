@@ -24,3 +24,14 @@ h2, h5{
   color:hsl(0, 0, 50%);
 
  }
+ ul {
+  list-style: none;
+  text-align: center;
+}
+li{
+  display: inline;
+  color: lightgray;
+  text-decoration: none;
+  padding-right: 1rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
