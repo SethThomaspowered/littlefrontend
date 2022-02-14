@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { BackendService } from '../backend.service';
-import { BOOKS } from '../library/books';
+import { BOOKS } from '../libraries/library/books';
 import { Book } from '../book.model';
 
 @Component({
@@ -15,7 +15,7 @@ export class BookdetailComponent  implements OnInit {
   gBBookBacks: any;
   books= BOOKS;
   book: any;
-  
+
   constructor(private route: ActivatedRoute, private backend: BackendService) { }
   findGBBooks(){
     this.backend.getGBBooks().subscribe(response => {
@@ -30,9 +30,9 @@ export class BookdetailComponent  implements OnInit {
   }
   ngOnInit(): void {
     this.findGBBooks();
-    
-    
-    
+
+
+
   }
 
 }

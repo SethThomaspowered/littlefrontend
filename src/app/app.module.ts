@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { LibraryComponent } from './library/library.component';
+import { LibraryComponent } from './libraries/library/library.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -16,6 +16,7 @@ import { SearchGBComponent } from './search-gb/search-gb.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { BookdetailComponent } from './bookdetail/bookdetail.component';
 import { CommentComponent } from './bookdetail/comment/comment.component';
+import { LibrariesComponent } from './libraries/libraries.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { CommentComponent } from './bookdetail/comment/comment.component';
     SearchGBComponent,
     NotfoundComponent,
     BookdetailComponent,
-    CommentComponent
+    CommentComponent,
+    LibrariesComponent
   ],
   imports: [
     BrowserModule,

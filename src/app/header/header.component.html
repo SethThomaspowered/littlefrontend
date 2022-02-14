@@ -4,9 +4,8 @@
     <nav>
       <ul>
           <li><a routerLink="/">Home</a></li>
-          <ul>
-            <li *ngFor="let library of libraries"><a routerLink="/library/{{library.id}}" >{{library.name}}</a></li>
-          </ul>
+          <li><a routerLink="/library" routerLinkActive="active" >Libraries</a></li>
+         
       </ul>
     </nav>
 </header>
