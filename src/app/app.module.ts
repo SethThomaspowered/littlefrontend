@@ -11,7 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BackendService } from './backend.service';
-import { NewBookComponent } from './new-book/new-book.component';
+import { NewBookComponent } from './libraries/library/new-book/new-book.component';
 import { SearchGBComponent } from './search-gb/search-gb.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { BookdetailComponent } from './bookdetail/bookdetail.component';

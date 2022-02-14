@@ -18,11 +18,12 @@ export class BackendService {
   getBook(id: string) {
     return this.http.get(`${this.uri}/api/books/${id}`);
   }
-  addBook(bookTitle: string, authorName: string){
+  addBook(bookTitle: string, authorName: string, libraryId:number){
     const book ={
       "bookTitle": bookTitle,
       "authorName": authorName,
-      "isAvailable": true
+      "isAvailable": true,
+      "libraryId": libraryId
     };
     console.log(book);
     this.http.post(`${this.uri}/api/books`, book).subscribe(response=> console.log(response));

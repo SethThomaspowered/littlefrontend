@@ -21,9 +21,9 @@ export class BookdetailComponent  implements OnInit {
     this.backend.getGBBooks().subscribe(response => {
       console.log(response);
       this.route.paramMap.subscribe(params => {
-        this.book = BOOKS.find(post => {
+        this.book = BOOKS.find(book => {
           let paramId: string = params.get("id") || "";
-          return post.id === parseInt(paramId);
+          return book.id === parseInt(paramId);
         });
       });
       this.gBBookBacks= response});

@@ -4,4 +4,4 @@
 <label name="newAuthorName">
     Author: <input type="text" [(ngModel)]="newAuthorName" placeholder="Author Name Here">
 </label>
-<input type="submit" (click)="addBook(newBookTitle, newAuthorName)" value="Add a book">
+<input type="submit" (click)="addBook(newBookTitle, newAuthorName, library.id)" value="Add a book">
