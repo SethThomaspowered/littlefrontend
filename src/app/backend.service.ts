@@ -32,6 +32,7 @@ export class BackendService {
     alert("Book has been sent to Library Steward");
   }
   addGBBook(title: string, description: string, image: string, googleId: string, author: string, libraryId: number){
+    const dateAdded = Date.now();
     const gBBook ={
       "title": title,
       "description": description,
@@ -39,6 +40,7 @@ export class BackendService {
       "googleId": googleId,
       "author": author,
       "libraryId": libraryId,
+      "dateAdded": dateAdded
     };
     console.log(gBBook);
     this.http.post(`${this.uri}/api/gbbooks`, gBBook).subscribe(response=>console.log(response));
