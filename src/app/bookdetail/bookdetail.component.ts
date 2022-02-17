@@ -10,7 +10,7 @@ import { Book } from '../book.model';
   styleUrls: ['./bookdetail.component.css']
 })
 export class BookdetailComponent  implements OnInit {
-  id: number|undefined;
+  bookId: number|undefined;
   gBBook: any;
   gBBookBacks: any;
   books= BOOKS;
@@ -20,15 +20,16 @@ export class BookdetailComponent  implements OnInit {
   findGBBooks(){
     this.backend.getGBBooks().subscribe(response => {
       console.log(response);
-      this.route.paramMap.subscribe(params => {
-        this.book = BOOKS.find(book => {
-          let paramId: string = params.get("id") || "";
-          return book.id === parseInt(paramId);
-        });
-      });
+
       this.gBBookBacks= response});
   }
+
+
   ngOnInit(): void {
+    this.route.paramMap.subscribe(params => {
+      let paramId: string = params.get("id") || "";
+      return this.bookId = parseInt(paramId);
+    });
     this.findGBBooks();
 
 
